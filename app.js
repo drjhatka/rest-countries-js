@@ -13,10 +13,12 @@ const displayCountries = ( countries )=>{
 
 const displayCountry = ({name, flags, capital, region, population, languages})=>{
     countryContainer.innerHTML += `
-        <div class="col-4 mb-2">
+        <div class="col-12 col-md-4 mb-2">
             <div class="card">
             <div class="card-body">
-                    <img src="${flags.png}" style="width: 18rem; height: 8rem; border:1px solid gray" class="card-img-top " alt="${flags.alt}"> 
+                <div class="mx-auto">
+                    <img src="${flags.png}" style=" height: 8rem; border:1px solid gray; margin:auto" class="card-img-top " alt="${flags.alt}"> 
+                </div>
                 <h5 class="card-title my-4 text-center text-danger fw-bold">${name.common}</h5><hr>
                 <p class="my-4 text-danger fw-bold text-center">Capital: ${capital[0]}</p><hr>
                 <p class="my-4 text-danger fw-bold text-center">Continent: ${region}</p><hr>
